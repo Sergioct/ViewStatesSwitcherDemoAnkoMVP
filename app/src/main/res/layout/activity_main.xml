@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:custom="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/normalButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/normal"/>
+
+        <Button
+            android:id="@+id/errorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/error"/>
+
+        <Button
+            android:id="@+id/emptyButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/empty"/>
+
+    </LinearLayout>
+
+    <com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2
+        android:id="@+id/viewStatesSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        custom:normalView="@+id/dataRecyclerView"
+        custom:emptyView="@+id/emptyView"
+        custom:errorView="@+id/errorView"
+        custom:loadingView="@+id/loadingView">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dataRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+                android:id="@+id/emptyView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+            <include layout="@layout/include_empty"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/loadingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <include layout="@layout/include_loading"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+                android:id="@+id/errorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+            <include layout="@layout/include_error"/>
+
+        </FrameLayout>
+
+    </com.sergiocrespotoubes.viewstatesswitcherlib.ViewStatesSwitcher2>
+
+</LinearLayout>
