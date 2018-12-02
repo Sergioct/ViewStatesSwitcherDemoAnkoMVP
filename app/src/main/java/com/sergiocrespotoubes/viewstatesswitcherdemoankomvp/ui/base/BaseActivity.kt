@@ -23,4 +23,8 @@ abstract class BaseActivity : AppCompatActivity(), BaseContract.View {
 
     open fun preparePresenter(intent: Intent?) {}
 
+    override fun finish() {
+        finish()
+    }
+
 }

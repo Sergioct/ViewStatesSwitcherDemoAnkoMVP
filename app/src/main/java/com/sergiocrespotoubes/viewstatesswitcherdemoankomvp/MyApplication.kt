@@ -1,6 +1,7 @@
 package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp
 
 import android.app.Application
+import com.sergiocrespotoubes.gasolineordiesel.di.appModule
 import org.koin.android.ext.android.startKoin
 
 /**
@@ -13,7 +14,7 @@ class MyApplication : Application() {
     override fun onCreate(){
         super.onCreate()
 
-        startKoin(this, listOf())
+        startKoin(this, listOf(appModule))
     }
 
 }

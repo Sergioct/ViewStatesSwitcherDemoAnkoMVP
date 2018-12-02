@@ -1,5 +1,8 @@
 package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.ui.main
 
+import arrow.core.Either
+import arrow.core.Failure
+import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.dto.PostsResponseDto
 import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.ui.base.BaseContract
 
 /**
@@ -13,7 +16,7 @@ interface MainContract {
         fun showError()
         fun showLoading()
         fun showEmpty()
-        fun showData()
+        fun showData(posts: List<PostItem>)
     }
 
     interface Presenter : BaseContract.Presenter {
@@ -23,7 +26,7 @@ interface MainContract {
     }
 
     interface Model : BaseContract.Model{
-
+        suspend fun getPosts(): Either<Failure, List<PostsResponseDto>>
     }
 
 }

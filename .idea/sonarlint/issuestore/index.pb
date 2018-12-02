@@ -25,3 +25,6 @@ japp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/componen
 _app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/MainPresenter.kt,6\4\643daf33e3ee40d4ecf11704a31607884f963f98
 Ž
 ^app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/MainContract.kt,f\8\f84b86a171c447aeb6673888b3296daaf66897aa
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
