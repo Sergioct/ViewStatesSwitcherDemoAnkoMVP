@@ -14,10 +14,10 @@ interface PostsRepository {
 
     suspend fun getPosts(): Either<Failure, List<PostsResponseDto>>
 
-    class DefaultPostsRepository(private val network: PostsService) : PostsRepository {
+}
 
-        override suspend fun getPosts(): Either<Failure, List<PostsResponseDto>> = network.getPosts()
+class DefaultPostsRepository(private val network: PostsService) : PostsRepository {
 
-    }
+    override suspend fun getPosts(): Either<Failure, List<PostsResponseDto>> = network.getPosts()
 
 }

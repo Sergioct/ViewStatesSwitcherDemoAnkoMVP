@@ -1,37 +1,37 @@
 package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.ui.main
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import arrow.core.Either
+import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.repository.PostsRepository
+import kotlinx.coroutines.*
 
-class MainPresenter(private val mView: MainContract.View) : MainContract.Presenter  {
+class MainPresenter(private val mView: MainContract.View,
+                    val postsRepository: PostsRepository) : MainContract.Presenter  {
 
-    //private val view: MainContract.View? by weak(view)
-    //
-    //var incidentFilter: IncidentFilter? = null
+    val uiDispatcher: CoroutineDispatcher = Dispatchers.Main
 
     override fun dropView() {
 
     }
 
-    //private fun onIncidentsSuccess(incidents: List<Incident>) {
-    //    view?.updateRecyclerView(incidents)
-    //}
-
     override fun loadData() {
         mView.showLoading()
-        GlobalScope.launch {
-            //val  = getItemsListUseCase.execute()
-            //comments.either(::handleError, ::handleSuccess(comments))
-            //mView?.hideProgress()
-            delay(2000)
-            handleError()
-        }
+        /*GlobalScope.launch(uiDispatcher) {
+            val posts = async { postsRepository.getPosts() }.await()
+
+            when(posts){
+                is Either.Left -> handleError()
+                is Either.Right -> {
+                    val posts = posts.b
+                    val postItems = posts.map { PostItem(it) }
+                    handleSuccess(postItems)
+                }
+            }
+        }*/
     }
 
     override fun loadError() {
         mView.showLoading()
-        GlobalScope.launch {
+        GlobalScope.launch(uiDispatcher) {
             delay(2000)
             handleError()
         }
@@ -39,7 +39,7 @@ class MainPresenter(private val mView: MainContract.View) : MainContract.Present
 
     override fun loadEmpty() {
         mView.showLoading()
-        GlobalScope.launch {
+        GlobalScope.launch(uiDispatcher) {
             delay(2000)
             handleSuccess(listOf())
         }
@@ -47,7 +47,7 @@ class MainPresenter(private val mView: MainContract.View) : MainContract.Present
 
 
     private fun handleError(){
-
+        mView.showError()
     }
 
     private fun handleSuccess(posts: List<PostItem>){

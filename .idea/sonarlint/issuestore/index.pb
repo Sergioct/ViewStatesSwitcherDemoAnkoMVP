@@ -28,3 +28,19 @@ _app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+œ
+lapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/datasource/PostsService.kt,6\3\634210d3f38abda02705023f83a28617daaa8006
+¡
+qapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/network/dto/PostsResponseDto.kt,d\6\d612eaa9f3a6fdf0e43c48f93b1269a979f0aff7
+§
+wapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/network/repository/PostsRepository.kt,1\c\1cdab2beff5468cc11103573773180fc7393ccec
+•
+eapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/network/PostsApi.kt,9\c\9c8d1de5045fa4d20910448961d23019aaca435b
+‹
+[app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/MainModel.kt,3\0\30d9272e8f9d33e091fbb4591f31b65ceaaae4dd
+Œ
+\app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/MainModule.kt,5\c\5c9516493cf3266398f01ef36db23508b5e1ed13
+Š
+Zapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/PostItem.kt,a\c\aca74e067163d25236f9220eb233a5580900fcca
+U
+%app/src/main/res/layout/item_post.xml,c\9\c93a562e619fa8652e1f96b2db154b274becae05
