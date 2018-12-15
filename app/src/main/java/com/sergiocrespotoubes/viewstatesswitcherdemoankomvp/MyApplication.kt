@@ -1,7 +1,7 @@
 package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp
 
 import android.app.Application
-import com.sergiocrespotoubes.gasolineordiesel.di.appModule
+import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.di.appModule
 import org.koin.android.ext.android.startKoin
 
 /**

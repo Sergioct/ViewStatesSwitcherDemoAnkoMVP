@@ -1,13 +1,10 @@
 package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.ui.main
 
-import arrow.core.Either
-import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.repository.PostsRepository
 import kotlinx.coroutines.*
 
-class MainPresenter(private val mView: MainContract.View,
-                    val postsRepository: PostsRepository) : MainContract.Presenter  {
+class MainPresenter(private val mView: MainContract.View) : MainContract.Presenter  {
 
-    val uiDispatcher: CoroutineDispatcher = Dispatchers.Main
+    private val uiDispatcher: CoroutineDispatcher = Dispatchers.Main
 
     override fun dropView() {
 

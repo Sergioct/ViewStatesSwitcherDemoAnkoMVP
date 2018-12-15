@@ -14,14 +14,14 @@ import org.koin.core.parameter.parametersOf
 
 class MainActivity : BaseActivity(), MainContract.View {
 
-    override val presenter : MainContract.Presenter by inject { parametersOf(this@MainActivity) }
+    override val presenter : MainContract.Presenter by inject { parametersOf(this) }
+    //override val presenter: MainContract.Presenter by inject { mapOf(DETAIL_VIEW to this) }
 
     lateinit var adapter: GroupAdapter<ViewHolder>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        viewStatesSwitcher.setStatus(ViewStatesSwitcher2.Status.LOADING)
         loadViews()
         presenter.loadData()
     }
