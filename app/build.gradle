@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -86,5 +84,9 @@ dependencies {
 
     //Others
     implementation 'com.gitlab.sergiocrespotoubes:viewstatesswitcher:0.1.0'
+
+    androidExtensions {
+        experimental = true
+    }
 
 }

@@ -11,9 +11,9 @@ class PostItem(val post: PostsResponseDto) : Item (){
     override fun getLayout() = R.layout.item_post
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
-        //viewHolder.title.text = post.title
-        //viewHolder.title.artist = post.artist
-        //viewHolder.title.artist = post.artist
+        viewHolder.userId.text = post.title
+        viewHolder.title.text = post.body
+        //viewHolder.completed.artist = post.body
     }
 
 }

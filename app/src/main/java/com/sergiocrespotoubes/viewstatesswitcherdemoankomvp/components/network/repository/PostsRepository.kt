@@ -2,7 +2,7 @@ package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.
 
 import arrow.core.Either
 import arrow.core.Failure
-import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.datasource.PostsService
+import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.PostsApi
 import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.dto.PostsResponseDto
 
 /**
@@ -11,13 +11,11 @@ import com.sergiocrespotoubes.viewstatesswitcherdemoankomvp.components.network.d
  *     www.SergioCrespoToubes.com
  */
 interface PostsRepository {
-
     suspend fun getPosts(): Either<Failure, List<PostsResponseDto>>
-
 }
 
-class DefaultPostsRepository(private val network: PostsService) : PostsRepository {
+class DefaultPostsRepository(private val itemsApi: PostsApi) : PostsRepository {
 
-    override suspend fun getPosts(): Either<Failure, List<PostsResponseDto>> = network.getPosts()
+    override suspend fun getPosts(): Either<Failure, List<PostsResponseDto>> = Either.Right(itemsApi.getPosts().await())
 
 }
