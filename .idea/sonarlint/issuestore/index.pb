@@ -28,8 +28,6 @@ _app/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/ui/main/
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-œ
-lapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/datasource/PostsService.kt,6\3\634210d3f38abda02705023f83a28617daaa8006
 ¡
 qapp/src/main/java/com/sergiocrespotoubes/viewstatesswitcherdemoankomvp/components/network/dto/PostsResponseDto.kt,d\6\d612eaa9f3a6fdf0e43c48f93b1269a979f0aff7
 §

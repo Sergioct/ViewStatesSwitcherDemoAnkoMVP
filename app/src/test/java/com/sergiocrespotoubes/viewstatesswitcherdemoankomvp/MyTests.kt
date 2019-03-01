@@ -1,0 +1,15 @@
+package com.sergiocrespotoubes.viewstatesswitcherdemoankomvp
+
+import io.kotlintest.matchers.should
+import io.kotlintest.matchers.startWith
+import io.kotlintest.shouldBe
+import io.kotlintest.specs.StringSpec
+
+class MyTests : StringSpec({
+  "length should return size of string" {
+    "hello".length shouldBe 5
+  }
+  "startsWith should test for a prefix" {
+    "world" should startWith("wor")
+  }
+})

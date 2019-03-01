@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sergiocrespotoubes.viewstatesswitcherdemoankomvp">
+          xmlns:tools="http://schemas.android.com/tools" package="com.sergiocrespotoubes.viewstatesswitcherdemoankomvp">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -11,7 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher"
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
-            android:name=".MyApplication">
+            android:name=".MyApplication" tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".ui.main.MainActivity"
                   android:screenOrientation="portrait">

@@ -10,4 +10,3 @@ interface PostsApi {
     fun getPosts(): Deferred<List<PostsResponseDto>>
 
 }
-
